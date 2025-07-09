@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Contador</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <h1>Contador de Números Decimal para Binário</h1>
+  <form method="POST" action="/contar">
+    <label for="inicio">Início:</label>
+    <input type="number" name="inicio" id="inicio" required>
+
+    <label for="fim">Fim:</label>
+    <input type="number" name="fim" id="fim" required>
+
+    <button type="submit">Contar</button>
+  </form>
+
+  <% if (numeros) { %>
+  <h2>Resultado:</h2>
+   <form action="/" method="get">
+    <button type="submit">Reiniciar</button>
+  </form>
+  <!-- <ul>
+    <% numeros.forEach(item => { %>
+      <li><%= item.decimal %> - <%= item.binario %></li>
+    <% }) %>
+  </ul> -->
+  <ul>
+  <% numeros.forEach(item => { %>
+    <%= item.decimal %> = <%= item.binario %>,
+  <% }) %>
+</ul>
+
+<% } %>
+
+</body>
+</html>

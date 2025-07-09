@@ -18,9 +18,9 @@ exports.gerarContagem = (inicio, fim) => {
   const passo = inicio <= fim ? 1 : -1;
 
   //   soma mais 1 ao passo
-   for (let i = inicio; passo > 0 ? i <= fim : i >= fim; i += passo + 4) {
+  //  for (let i = inicio; passo > 0 ? i <= fim : i >= fim; i += passo + 4) {
   
-  // for (let i = inicio; passo > 0 ? i <= fim : i >= fim; i += passo) {
+  for (let i = inicio; passo > 0 ? i <= fim : i >= fim; i += passo) {
     resultado.push({
       decimal: i,
       binario: i.toString(2),
